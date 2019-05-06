@@ -32,9 +32,7 @@
 # |
 # *------------------------------------------------------------------
  
-### Clear any existing data or functions.
-rm(list=ls())
-
+ 
 ###########################################################################
 ## Set the Paths
 ###########################################################################
@@ -47,6 +45,8 @@ rm(list=ls())
 require(assertthat)
 require(reshape2)
 
+### Needed for my laptop
+require(later)
 
 #devtools::install_github("jcheng5/googleCharts")
 
@@ -62,6 +62,10 @@ require(lubridate)
 require(xts)
 require(shiny)
 require(leaflet)
+library(rJava)
+library(mailR)
+library(timeDate)
+require(shinyjs)
 
 ###########################################################################
 ## Set Initial Values
@@ -76,13 +80,13 @@ require(leaflet)
 
 runApp("paleo_flow")
 
-runApp("my_example5")
+##runApp("my_example5")
 
 
 ###########################################################################
 ##  Publish to Shiny website
 ###########################################################################
-rsconnect::deployApp("paleo_flow")
+##rsconnect::deployApp("paleo_flow")
 
 
 
